@@ -2,4 +2,4 @@
   My Portfolio
 </h1>
 
-This my personal web portofolio to showcase about me, my abilty, and my recent works.
+This my personal web portofolio to showcase about me, my abilties , and my recent works.
