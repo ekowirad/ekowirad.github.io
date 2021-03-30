@@ -1,0 +1,14 @@
+.slick-img {
+  background-color: $gray-light;
+  border-radius: $radius-10;
+  height: 50vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  outline: none;
+  & > img {
+    object-fit: contain;
+    height: 100%;
+  }
+}

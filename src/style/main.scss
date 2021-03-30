@@ -1,0 +1,19 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+// @import "slick/_slick-theme.scss";
+// @import "slick/_slick.scss";
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+@import "base.scss";
+
+@import "components/line-decoration.scss";
+@import "components/icon-box.scss";
+@import "components/tag-box.scss";
+@import "components/home.scss";
+@import "components/about.scss";
+@import "components/skill.scss";
+@import "components/work.scss";
+@import "components/work-detail.scss";
+@import "components/footer.scss";
+@import "components/slider.scss";
+@import "components/button.scss";

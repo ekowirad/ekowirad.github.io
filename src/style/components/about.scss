@@ -1,0 +1,92 @@
+.about-section {
+  @include base-container;
+  background-color: white;
+
+  & > .img-decor-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    & > .img-decor {
+      width: 700px;
+      height: 700px;
+      border-radius: $radius-20;
+      background-image: url(../images/img-decor.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  & > .text-decor-container {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    & > h1 {
+      text-align: right;
+      mix-blend-mode: difference;
+      margin: 0 60px;
+      font-size: $text-decor;
+      -webkit-text-stroke: 1px white;
+
+      @include breakpoint(laptop) {
+        font-size: $text-decor-laptop;
+      }
+      @include breakpoint(mobileonly) {
+        font-size: $text-decor-mobile;
+      }
+    }
+  }
+
+  & > .card-container {
+    @include base-card-container;
+
+    & > .card {
+      z-index: 2;
+      @include base-card;
+      transform: translateX(-70%);
+      width: 450px;
+      height: 450px;
+      margin: $space-16;
+
+      @include breakpoint(laptop) {
+        transform: translateX(-50%);
+      }
+      @include breakpoint(tablet) {
+        transform: translateX(0);
+      }
+
+      & > .card-body {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        text-align: justify;
+      }
+
+      & > .card-footer {
+        margin-top: $space-16;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+        & > .network-item {
+          border-radius: $radius-8;
+          margin-left: $space-16;
+          width: 40px;
+          height: 40px;
+          background-color: lightgray;
+        }
+      }
+    }
+  }
+}

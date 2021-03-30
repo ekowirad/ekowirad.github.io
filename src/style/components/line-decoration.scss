@@ -1,0 +1,58 @@
+.line-decor,
+.line-decor-inverted {
+  height: calc(100% - 26vh);
+  max-width: 80px;
+  mix-blend-mode: difference;
+  border-right: white 1px solid;
+  color: white;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 30px;
+  margin: 0 60px;
+
+  & > a {
+    writing-mode: vertical-lr;
+    word-spacing: 10px;
+    letter-spacing: 0.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 300;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    margin: 0;
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  & > p {
+    font-weight: 400;
+    word-spacing: 10px;
+    letter-spacing: 0.5px;
+    writing-mode: vertical-lr;
+
+    & > span {
+      font-weight: 300;
+    }
+  }
+
+  & > .box {
+    border-radius: $radius-5;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+  }
+}
+
+.line-decor-inverted {
+  transform: rotate(180deg);
+}

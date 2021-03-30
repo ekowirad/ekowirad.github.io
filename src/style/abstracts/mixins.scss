@@ -1,0 +1,50 @@
+@mixin breakpoint($point) {
+  @if $point==desktop {
+    @media (max-width: 75em) {
+      @content;
+    }
+  } @else if $point==laptop {
+    @media (max-width: 64em) {
+      @content;
+    }
+  } @else if $point==tablet {
+    @media (max-width: 50em) {
+      @content;
+    }
+  } @else if $point==phablet {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  } @else if $point==mobileonly {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin base-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+@mixin base-card-container {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin base-card {
+  position: relative;
+  padding: $space-16;
+  background-color: white;
+  border-radius: $radius-10;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}

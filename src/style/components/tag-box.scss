@@ -1,0 +1,12 @@
+.tag-box {
+  background: $gray;
+  margin: $space-8 $space-16 $space-8 0;
+  padding: 0 $space-24;
+  height: 35px;
+  border-radius: $radius-8;
+  width: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

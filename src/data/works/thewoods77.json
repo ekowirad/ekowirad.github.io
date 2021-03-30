@@ -1,0 +1,14 @@
+    {
+        "slug": "thewoods77",
+        "title": "The Woods 77",
+        "summary": "The woods 77 is Australia based company that provide a real estate service. The company need a simple CMS where the owner can manage their costumer and the property. There are feature included in this web such as owner can manage costumer, owner can manage their real estate with multiple images upload, owner can manage the slider of the web. With this web owner can manage the web content included the image such as contact, service, and about us. Beside that owner will get email notify when costumer request the property.",
+        "tasks": "Create all module in admin section, Layouting admin section, Fixing bug",
+        "stacks": [
+            "Laravel Framework",
+            "Vue js",
+            "Stisla Bootstrap"
+        ],
+        "demo": "https://thewoods77.com",
+        "source": "",
+        "images": []
+    }

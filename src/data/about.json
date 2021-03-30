@@ -1,0 +1,22 @@
+[
+    {
+        "content": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe autem nobis perspiciatis deleniti impedit consectetur, aliquid sunt commodi, aperiam, quaerat blanditiis inventore. Iste minus voluptatum libero vitae placeat laborum quae.",
+        "networks": [
+            {
+                "alt": "mail",
+                "link": "mailto:ekowiradharma@gmail.com",
+                "image": "../images/socials/mail.png"
+            },
+            {
+                "alt": "linkedin",
+                "link": "#",
+                "image": "../images/socials/linkedin.png"
+            },
+            {
+                "alt": "github",
+                "link": "https://github.com/ekowirad",
+                "image": "../images/socials/github.png"
+            }
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+.work-detail {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 $space-32;
+  max-width: 1600px;
+  background-color: white;
+
+  & > .content {
+    padding: $space-32 0;
+    width: 100%;
+
+    .section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin:$space-56 0;
+
+      & > h1 {
+        margin-bottom: $space-16;
+      }
+      &.row {
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        & > button {
+          margin-right: $space-16;
+        }
+      }
+    }
+  }
+}
