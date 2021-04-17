@@ -12,7 +12,13 @@
             "Scss",
             "Firebase"
         ],
-        "demo": "",
+        "demo": "https://epic-liskov-3a3202.netlify.app",
         "source": "https://github.com/ekowirad/react-shop",
-        "images": []
+        "images": [
+            "https://i.ibb.co/HCBHcRq/reactshop-preview-1.png",
+            "https://i.ibb.co/CvSFMVL/reactshop-preview-2.png",
+            "https://i.ibb.co/JcFM98p/reactshop-preview-4.png",
+            "https://i.ibb.co/ckZLDZq/reactshop-preview-3.png"
+        ],
+        "type": "web"
     }

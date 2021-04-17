@@ -14,5 +14,11 @@
         ],
         "demo": "https://play.google.com/store/apps/details?id=id.appmu.demo",
         "source": "",
-        "images": []
+        "images": [
+            "https://i.ibb.co/hMP5Jnj/appmu-preview-2.png",
+            "https://i.ibb.co/mvrzdGZ/appmu-preview-1.png",
+            "https://i.ibb.co/cY1Lqww/appmu-preview-3.png",
+            "https://i.ibb.co/k9N8d47/appmu-preview-4.png"
+        ],
+        "type": "mobile"
     }

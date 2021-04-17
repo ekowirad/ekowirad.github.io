@@ -1,7 +1,15 @@
+.slick-slider {
+  width: 45%;
+  flex: 45%;
+  @include breakpoint(laptop) {
+    width: 100%;
+  }
+}
+
 .slick-img {
   background-color: $gray-light;
   border-radius: $radius-10;
-  height: 50vh;
+  height: 65vh;
   display: flex !important;
   align-items: center;
   justify-content: center;

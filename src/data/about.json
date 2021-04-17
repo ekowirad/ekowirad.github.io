@@ -8,11 +8,6 @@
                 "image": "../images/socials/mail.png"
             },
             {
-                "alt": "linkedin",
-                "link": "#",
-                "image": "../images/socials/linkedin.png"
-            },
-            {
                 "alt": "github",
                 "link": "https://github.com/ekowirad",
                 "image": "../images/socials/github.png"

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
+
 function Footer() {
     const currentYear = new Date().getFullYear()
     const links = [
@@ -28,9 +29,10 @@ function Footer() {
                 <p>&copy; {currentYear}, Eko Wira Dharma.</p>
                 <div className="menu-bottom">
                     {
-                        links.map(({ to, title }) => {
+                        links.map(({ to, title },idx) => {
                             return <AnchorLink
                                 to={to}
+                                key={idx}
                                 title={title}
                             />
                         })

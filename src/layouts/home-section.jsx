@@ -7,6 +7,7 @@ import { gsap } from 'gsap'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import LineDecoration from '../components/line-decoration'
 import { Power1, Power2, Power3, Sine } from 'gsap/all'
+import { forwardRef } from 'react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -42,6 +43,7 @@ function HomeSection() {
 
     useEffect(() => {
         homeAnimate()
+
     }, [])
 
     const homeAnimate = () => {
@@ -82,16 +84,18 @@ function HomeSection() {
             delay: 1.8
         })
 
-
-        gsap.to(textMain.current, {
-            scrollTrigger: {
-                trigger: textMain.current,
-                scrub: 0.5,
-                start: 'top 10%',
-                end: "+=200%",
-            },
-            y: 1200,
+        gsap.delayedCall(1, () => {
+            gsap.to(textMain.current, {
+                scrollTrigger: {
+                    trigger: textMain.current,
+                    scrub: 0.5,
+                    start: 'top 10%',
+                    end: "+=200%",
+                },
+                y: 1200,
+            })
         })
+
 
     }
 
@@ -99,10 +103,11 @@ function HomeSection() {
         <section id="home" className="home-section">
             <div ref={lineLeft} className="line-decor">
                 {
-                    links.map(({ to, title }) => {
+                    links.map(({ to, title }, idx) => {
                         return <AnchorLink
                             to={to}
                             title={title}
+                            key={idx}
                         />
                     })
                 }
@@ -111,7 +116,7 @@ function HomeSection() {
             <div className="hero">
                 <div className="text-hero">
                     <div ref={textChild} className="child"> HELLO</div>
-                    <div  ref={textMain} className="main"> <p>WORLD</p></div>
+                    <div ref={textMain} className="main"> <p>WORLD</p></div>
                 </div>
 
                 <div ref={imageMain} className="img-hero">

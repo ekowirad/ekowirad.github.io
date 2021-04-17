@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useRef } from 'react'
 import { createRef } from 'react'
 import { useEffect } from 'react'
+import { StaticQuery, graphql, useStaticQuery, navigate } from "gatsby"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,6 +13,25 @@ function WorkSection() {
     const textDecor = useRef(null)
     const lineDecorRef = createRef()
     const arr = Array(7).fill('a')
+    const { allWorksJson } = useStaticQuery(
+        graphql`
+        query WorksQuery {
+            allWorksJson {
+                nodes {
+                id
+                source
+                slug
+                demo
+                stacks
+                summary
+                tasks
+                title
+                type
+                }
+             }
+          }
+          `
+    )
 
     useEffect(() => {
         gsap.from(lineDecorRef.current, {
@@ -59,8 +79,13 @@ function WorkSection() {
             <div className="card-container">
                 <div className="card-group">
                     {
-                        arr.map(a => {
-                            return <div className="card"></div>
+                        allWorksJson.nodes.map(item => {
+                            return <div key={item.id} onClick={() => { navigate(`/works/${item.slug}`) }} className="card">
+                                <div className="card-body">
+                                    <h3>{item.title}</h3>
+                                    <p>{item.summary}</p>
+                                </div>
+                            </div>
                         })
                     }
                 </div>

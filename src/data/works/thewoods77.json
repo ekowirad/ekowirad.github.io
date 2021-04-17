@@ -10,5 +10,11 @@
         ],
         "demo": "https://thewoods77.com",
         "source": "",
-        "images": []
+        "images": [
+            "https://i.ibb.co/5BG06LJ/woods-preview-1.jpg",
+            "https://i.ibb.co/TPYcRyb/woods-preview-2.png",
+            "https://i.ibb.co/sjqyhvw/woods-preview-3.png",
+            "https://i.ibb.co/fQYjWLq/woods-preview-4.png"
+        ],
+        "type": "web"
     }

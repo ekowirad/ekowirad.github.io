@@ -13,5 +13,10 @@
         ],
         "demo": "https://play.google.com/store/apps/details?id=benesse.shimajiro",
         "source": "",
-        "images": []
+        "images": [
+            "https://i.ibb.co/kG63n6L/shimajiro-preview-3.png",
+            "https://i.ibb.co/BcmpXWn/shimajiro-preview-1.png",
+            "https://i.ibb.co/LpkP1dz/shimajiro-preview-2.png"
+        ],
+        "type": "mobile"
     }

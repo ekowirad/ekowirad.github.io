@@ -15,43 +15,40 @@ function Work(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const data = props.data.worksJson
 
-  console.log("PROPS", props)
+
+  console.log("PROPS", data)
   return <>
     <div className="work-detail">
       <Slider {...settings}>
-        <div className="slick-img">
-          <img src={decor} alt="" />
-        </div>
-        <div className="slick-img">
-          <img src={github} alt="" />
-        </div>
+        {
+          data.images.map((img, idx) => {
+            return <div className="slick-img" key={idx}>
+              <img onDoubleClick={() => { window.open(img) }} src={img} alt="" />
+            </div>
+          })
+        }
       </Slider>
       <div className="content">
         <div className="section row">
-          <Button disabled onClick={() => { window.open("https://www.w3schools.com") }} text="Demo"></Button>
-          <Button text="Source Code"></Button>
+          <Button disabled={data.demo == ''} onClick={() => { window.open(data.demo) }} text="Live"></Button>
+          <Button disabled={data.source == ''} onClick={() => { window.open(data.source) }} text="Source Code"></Button>
         </div>
         <div className="section">
-          <h1>Project title</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa similique molestiae eum officiis odit asperiores nemo. Maxime omnis similique modi, magni ullam beatae maiores dolore cumque at illo suscipit.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa similique molestiae eum officiis odit asperiores nemo. Maxime omnis similique modi, magni ullam beatae maiores dolore cumque at illo suscipit.</p>
+          <h1>{data.title}</h1>
+          <p>{data.summary}</p>
         </div>
         <div className="section">
           <h3>Main task</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ipsa similique molestiae eum officiis odit asperiores nemo.</p>
+          <p>{data.tasks}</p>
         </div>
         <div className="section row">
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
-          <div className="tag-box">Kotlin</div>
+          {
+            data.stacks.map((item, idx) => {
+              return <div key={idx} className="tag-box">{item}</div>
+            })
+          }
         </div>
       </div>
     </div>
@@ -62,9 +59,16 @@ function Work(props) {
 export const query = graphql`
   query workQuery($id: String) {
   worksJson(id: { eq: $id }) {
-    title
-    summary
+    id
+    source
     slug
+    demo
+    stacks
+    summary
+    tasks
+    title
+    type
+    images
   }
 }
 `
