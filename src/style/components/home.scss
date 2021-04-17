@@ -50,8 +50,8 @@
     }
 
     & > .img-hero {
-      width: 894px;
-      height: 894px;
+      width: 850px;
+      height: 850px;
       border-radius: $radius-20;
       background-image: url(../images/img-decor.jpg);
       background-position: center;
@@ -63,6 +63,11 @@
       @include breakpoint(laptop) {
         width: 700px;
         height: 700px;
+      }
+
+      @include breakpoint(mobileonly) {
+        width: 560px;
+        height: 560px;
       }
 
       & > .child {
@@ -89,7 +94,7 @@
           height: 100%;
           width: 100%;
           object-fit: cover;
-          filter: url(#noise);
+          // filter: url(#noise);
         }
       }
     }

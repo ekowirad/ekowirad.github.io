@@ -65,6 +65,11 @@
       background-image: url(../images/img-decor.jpg);
       background-position: center;
       background-size: cover;
+
+      @include breakpoint(tablet) {
+        width: 560px;
+        height: 560px;
+      }
     }
   }
 

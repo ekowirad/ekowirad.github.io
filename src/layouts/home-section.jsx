@@ -71,7 +71,7 @@ function HomeSection() {
             ease: Sine.easeIn
         })
 
-        TweenMax.to(noiseEl.current, 0.1, { attr: { scale: '80' }, delay: 2.5 })
+        // TweenMax.to(noiseEl.current, 0.1, { attr: { scale: '80' }, delay: 2.5 })
 
         TweenMax.from(lineLeft.current, 1, {
             x: -200,
